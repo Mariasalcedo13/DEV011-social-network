@@ -1,13 +1,16 @@
-
   import { getFirestore, collection, getDocs  } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
   import { getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+  
+  
+  import { renderCreateAccount } from "./render.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
     const firebaseConfig = {
     apiKey: "AIzaSyA_nNPVRwXqmgLlxdYL4NmJwiItX9t2D5E",
     authDomain: "social-network-c61c9.firebaseapp.com",
@@ -24,7 +27,7 @@
   const auth = getAuth(app)
   const firestore = getFirestore(app);
   
-
+// Para crear o registrar usuarios
 const buttonSignin = document.querySelector('#buttonSignin');
 buttonSignin.addEventListener('click', (e) => {
   e.preventDefault();
@@ -41,6 +44,8 @@ buttonSignin.addEventListener('click', (e) => {
     });
 })
 
+
+// Para iniciar sesion o ingresar 
 const buttonLogin =  document.querySelector('#buttonLogin');
 buttonLogin.addEventListener('click', (e) => {
   e.preventDefault();
@@ -101,3 +106,7 @@ onAuthStateChanged(auth, (user) => {
 //import { myFunction } from './lib/index.js';
 
 //myFunction();
+
+
+const borrar = document.querySelector('#borrar') 
+borrar.addEventListener('click', renderCreateAccount)

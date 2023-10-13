@@ -3,6 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
 import { getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
   
+import { createrUser, loginUser } from "./lib/firebase.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyA_nNPVRwXqmgLlxdYL4NmJwiItX9t2D5E",
     authDomain: "social-network-c61c9.firebaseapp.com",
@@ -27,6 +29,7 @@ export function renderCreateAccount(){
     containerMain.setAttribute("class", "containerRegister")
   //header
   const header = document.createElement("header");
+  header.setAttribute("class", "headerRegister")
   
   //Titulo de registro
     const title = document.createElement("h2");
@@ -34,7 +37,7 @@ export function renderCreateAccount(){
   // Imagen
     const image = document.createElement("img")
     image.src = '/src/evolucion.png'
-    image.style.width = '40%';
+    image.style.width = '50%';
     image.style.height = 'auto';
   
   //Contenedor de los inputs
@@ -42,20 +45,23 @@ export function renderCreateAccount(){
     container.setAttribute("class", "Inputcontainer")
   //input Username
     const username = document.createElement("h4")
-    username.textContent = "Nombres completos:"
+    username.textContent = "Nombres completos:";
+    username.setAttribute("class", "h4Register");
     const inputName = document.createElement("input")
     inputName.setAttribute("type", "text");
     inputName.setAttribute("class", "input")
   // input correo
     const email = document.createElement("h4")
     email.textContent = "Correo Electrónico:"
+    email.setAttribute("class", "h4Register");
     const inputEmail = document.createElement("input")
     inputEmail.setAttribute("type", "email");
     inputEmail.setAttribute("class", "input")
     inputEmail.setAttribute("id", "emailRegister")
   //input contrasena
     const password = document.createElement("h4")
-    password.textContent = "Contraseña:"
+    password.textContent = "Contraseña:";
+    password.setAttribute("class", "h4Register");
     const inputPassword = document.createElement("input")
     inputPassword.setAttribute("type", "password");
     inputPassword.setAttribute("class", "input")
@@ -71,15 +77,15 @@ export function renderCreateAccount(){
   or.setAttribute("id", "or")
 
   const buttonGoogle = document.createElement("button");
-  buttonGoogle.textContent= "Continuar con Google"
+  buttonGoogle.textContent= "Registrarse con Google"
   buttonGoogle.setAttribute("class", "buttonRegister")
 //boton volver
-  const buttonBack = document.createElement("input");
-  buttonBack.setAttribute("type", "button");
-  buttonBack.setAttribute("value", "Volver")
-  buttonBack.setAttribute("onclick", "history.back()")
-  buttonBack.setAttribute("class", "buttonRegister")
-  
+  const buttonBack = document.createElement("button");
+  buttonBack.textContent = "Volver"
+  buttonBack.setAttribute("class", "buttonRegister");
+  buttonBack.addEventListener("click", () => {
+    location.href="index.html";
+  })
 
     main.appendChild(containerMain);
     containerMain.appendChild(header)
@@ -103,14 +109,7 @@ buttonContinue.addEventListener("click", (e)=> {
     const singUpEmail = document.querySelector('#emailRegister').value;
     const singPassword = document.querySelector('#passwordRegister').value;
     //console.log(singUpEmail , singPassword);
-   
-    createUserWithEmailAndPassword(auth, singUpEmail, singPassword)
-       .then(userCredential => {
-         console.log('signup');
-       })
-       .catch(error => {
-         console.error('Error al registrarse:', error.message);
-       });
+    createrUser(auth, singUpEmail, singPassword);
 })
 
   }

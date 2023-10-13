@@ -3,15 +3,10 @@
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
   import { getAuth,signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
   
-  
   import { renderCreateAccount } from "./render.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-    const firebaseConfig = {
+  import { createrUser, loginUser } from "./lib/firebase.js";
+ 
+  const firebaseConfig = {
     apiKey: "AIzaSyA_nNPVRwXqmgLlxdYL4NmJwiItX9t2D5E",
     authDomain: "social-network-c61c9.firebaseapp.com",
     projectId: "social-network-c61c9",
@@ -26,41 +21,22 @@
   const analytics = getAnalytics(app);
   const auth = getAuth(app)
   const firestore = getFirestore(app);
-  
 // Para crear o registrar usuarios
 const buttonSignin = document.querySelector('#buttonSignin');
 buttonSignin.addEventListener('click', (e) => {
   e.preventDefault();
  const singUpEmail = document.querySelector('#emailIn').value;
  const singPassword = document.querySelector('#passwordIn').value;
- //console.log(singUpEmail , singPassword);
-
- createUserWithEmailAndPassword(auth, singUpEmail, singPassword)
-    .then(userCredential => {
-      console.log('signup');
-    })
-    .catch(error => {
-      console.error('Error al registrarse:', error.message);
-    });
+ createrUser(auth, singUpEmail, singPassword)
 })
-
-
 // Para iniciar sesion o ingresar 
 const buttonLogin =  document.querySelector('#buttonLogin');
 buttonLogin.addEventListener('click', (e) => {
   e.preventDefault();
   const loginEmail = document.querySelector('#emailLog').value;
   const loginPassword = document.querySelector('#passwordLog').value;
-//console.log(loginEmail, loginPassword);
-signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-.then(userCredential => {
-  
-  console.log('login');
-})
-.catch(error => {
-  console.error('Error al registrarse:', error.message);
+loginUser(auth, loginEmail, loginPassword)
 });
-})
 
 
 const div = document.querySelector('#close')

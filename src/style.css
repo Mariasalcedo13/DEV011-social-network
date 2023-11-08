@@ -1,0 +1,764 @@
+@font-face {
+    font-family: 'Font1';
+    src: url("/fonts/letter1.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url("/fonts/KGBlankSpaceSolid.ttf") format('truetype');
+}
+#homepagePostes, .homepage {
+padding-top: 0em;
+box-shadow: 0 0 0px;
+display: flex;
+flex-direction: column;
+min-width: 100%;
+place-content: center;
+align-items: center;
+min-height: 100%;
+}
+html {
+    background-size: 100% 100%;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+
+body {
+    background: linear-gradient(#f3f5ef, #c0df8d);
+    background-size: 100% 100%;
+    min-width: 100%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0px;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+/* .background-layer {
+    position: fixed;
+    pointer-events: none; Evita que la capa intercepte eventos del ratón, para que los elementos subyacentes puedan recibir eventos 
+} */
+.background-layer{
+    position: fixed;
+    pointer-events: none;
+    background: url('/img/patron2.avif');
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    }
+.main {
+    display: flex;
+    place-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+}
+
+.headerRegister {
+    font-size: 0.8em;
+    font-family: 'Font2', sans-serif;
+    width: 80%;
+    text-align: center;
+
+}
+
+
+/*MOBILE FIRST VISTA REGISTRO */
+
+
+.h4Register {
+    width: 100%;
+    margin: 2%;
+    font-family: 'Font1', sans-serif;
+    font-size: 20px;
+}
+
+.Inputcontainer {
+    
+    border-radius: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    place-items: center;
+    margin-top: 2%;
+   
+}
+
+.input {
+    width: 100%;
+    height: 2em;
+    border-radius: 0.7em;
+    box-shadow: 3px 3px 2px rgb(32, 32, 32);
+}
+
+.buttonRegister {
+    box-shadow: 3px 3px 4px black;
+    width: auto;
+    height: 2em;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: background-color 0.3s;
+    background-color: #D09080;
+    color: #57403A;
+    font-size: 85%;
+    border-color: transparent;
+    margin: 10px;
+    font-family: 'Font2', sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    align-items: center;
+    gap: 4%;
+    font-weight: bolder;
+}
+.buttonRegister#google {
+    width: 90%;
+    height: 15%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-size: 60%;
+}
+.imgGoogle{
+    width: 10%;
+    }
+    
+.buttonRegister:hover {
+    background-color: #57403A;
+    color: #D09080;
+}
+
+#continue {
+    margin-top: 0%;
+}
+
+#or {
+    font-family: 'Font1', sans-serif;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 30px;
+}
+
+.googleLoginBtn{
+border-radius: 5px;
+box-shadow: 3px 3px 4px black;
+border: 1px solid #000;
+margin-top: 1em;
+
+}
+
+.success {
+color: green;
+font-family: 'Font1', sans-serif;
+font-size: 20px;
+padding-top: 10px;
+}
+
+.error {
+color: red;
+font-family: 'Font1', sans-serif;
+font-size: 20px;
+padding-top: 10px;
+}
+
+/*MOBILE FIRST VISTA PRINCIPAL*/
+.containerimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#homeplant {
+    width: 90%;
+}
+
+.homewelcome, .hometittle, .words{
+    font-family: 'Font1', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.hometittle {
+    font-size: 300%;
+    font-family: 'Font2', sans-serif;
+}
+
+.registrationButton,
+.loginButton {
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D09080;
+    color: #57403A;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    /* Espacio entre los botones */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: space-around;
+    height: auto;
+    width: auto;
+    font-family: 'Font2', sans-serif;
+    font-weight: bolder;
+    font-size: 80%;
+}
+.registrationButton:hover,
+.loginButton:hover {
+    background-color: #57403A;
+    color: #D09080;
+}
+.words {
+    font-size: 250%;
+   text-align: center;
+   font-weight: bolder;
+   padding-bottom: 7%;
+}
+.wordsHome {
+    font-size: 150%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.orderbuttons {
+    font-family: 'Font1', sans-serif;
+    font-size: 25px;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.homepage {
+    padding-top: 30px;
+    box-shadow: 0 0 10px rgba(156, 158, 156, 0.346), 0 0 20px rgba(135, 136, 135, 0.5), 0 0 30px rgba(0, 255, 0, 0.203);
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+.homepage1{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.content {
+display: flex;
+text-align: center;
+flex-direction: column;
+place-content: center;
+width: 90%;
+}
+/*MOBILEFIRST DE VISTA DE POSTS*/
+.headerPost {
+width: 100%;
+height: 100px;
+background-color:#7e957d;
+margin: 0%;
+font-family: 'Font2', sans-serif;
+place-content: center;
+align-items: center;
+font-size: 250%;
+display: flex;
+color:white;
+-webkit-text-stroke: 2px black;
+gap: 2px;
+}
+.logoImage{
+width: 40px;
+height: auto;
+}
+.logOutButton{
+width: 45px;
+height: auto;
+display: flex;
+background-color: transparent;
+border-color: transparent;
+border-radius: 16px;
+padding: 3px;
+
+}
+.logOutButton:hover{
+    background-color: white;
+}
+.logOutButton img{
+width: 100%;
+height: 100%;
+}
+
+.postView {
+width: 100%;
+list-style: none;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+place-content: center;
+padding-top: 30px;
+margin-left: 20px;
+margin-right: 20px;
+}
+.ListGroupItem{
+font-family: 'Font1', sans-serif;
+border-color: #57403A;
+border-style: solid;
+background-color: #7e957d;
+border-radius: 1em;
+width: 70%;
+height: auto;
+padding: 20px;
+gap: 10px;
+display: flex;
+flex-direction: column;
+box-shadow: 3px 3px 9px black;
+
+}
+
+li h5 {
+margin: 0%;
+font-size: 150%;
+font-weight: bolder;
+text-align: left;
+font-family: 'Font2', sans-serif;
+color:  #382925;
+padding-left: 3%;
+}
+
+li p {
+    font-weight: bolder;
+    height: auto;
+    font-size: 150%;
+    margin: 0%;
+    padding: 12px;
+    background-color: aliceblue;
+    border: 2px;
+    border-color: #57403A;
+    border-style: solid;
+    border-radius: 0.2em;
+    }
+.containerPubication{
+   width: 100%;
+   display: flex;
+   place-content: center;
+   align-self: center;
+   justify-content: center;
+   flex-direction: row;
+   margin-top: 2%;
+   gap: 5px;
+}
+.imagePublication{
+width: 70px;
+height: auto;
+align-self: flex-start;
+background-color: white;
+border-color: black;
+border-style: solid;
+border-radius: 1em;
+padding: 0.5em;
+}
+.imgPostPublication {
+width: 50%;
+height: auto;
+align-self: center;
+}
+#task-form{
+background-color: #a38a83;
+width: 60%;
+height: 300px;
+display: flex;
+place-content: center;
+align-self: center;
+justify-content: center;
+flex-direction: column;
+padding: 10px;
+border-color:#57403A;
+border-style: solid;
+border-radius: 1em;
+gap: 5px
+}
+.postTitle{
+    border-radius: 0.3em;
+    font-family: 'Font2', sans-serif;
+    height: 18%;
+    font-size: 150%;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap; /* Evita el salto de línea del texto */
+    text-overflow: ellipsis; 
+}
+#postText{
+    border-radius: 0.3em;
+    font-family: 'Font1', sans-serif;
+    height: 58%;
+    font-size: 200%;
+    padding: 10px;
+}
+.buttonSave {
+    border-radius: 0.4em;
+    width: auto;
+    align-self: last baseline;
+    height: 20%;
+    font-family: 'Font2', sans-serif;
+    font-size: 1.2em;
+    padding-left: 20px;
+    transition: background-color 0.3s;
+    padding-right: 20px;
+    background-color: #57403A;
+    color: #f5bdaf;
+}
+.buttonSave:hover {
+    background-color: #f5bdaf;
+    color: #57403A;
+}
+.containerLikes{
+display: flex;
+place-content: left;
+align-items: center;
+gap:10px;
+font-weight: bolder;
+font-size: 20px;
+}
+.imgLike{
+width: 100%;
+height: auto;
+}
+
+.editTextarea, .editContentTextarea{
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 10px;
+    height: auto;
+}
+.editTextarea{
+    font-family: 'Font2', sans-serif;
+    font-size: 160%;
+}
+
+.editContentTextarea{
+    font-family: 'Font1', sans-serif;
+    font-size: 190%;
+    font-weight: bolder;
+}
+.editPublic{
+padding-top: 0%;
+padding-bottom: 0%;
+margin-top: 0%;
+margin-bottom: 0%;
+font-size: 180%;
+background-color: #d7ffd5;
+width: 60%;
+align-self: center;
+place-content: center;
+border-radius: 10px;
+}
+.saveEditButton{
+font-size: 100%;
+border-radius: 10px;
+place-content: center;
+font-family: 'Font2', sans-serif;
+background:#4c594b;
+width: 30%;
+align-self: center;
+color: white;
+}
+.saveEditButton:hover {
+background-color: white;
+color: #4c594b;
+
+}
+.buttonOptions{
+display: flex;
+place-content: end;
+gap: 5px;
+}
+.deleteButton, .editButton{
+width: auto;
+border-radius: 10px;
+font-family: 'Font2', sans-serif;
+}
+.deleteButton:hover, .editButton:hover{
+background-color: #382925;
+color: #71bd6b;
+}
+
+/* Estilos para pantallas de escritorio */
+@media only screen and (min-width: 920px) {
+   /*VISTA PRINCIPAL*/
+
+   .homepage {
+    flex-direction: row;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 90%;
+    height: 90%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+   
+    }
+    .homepage1{
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        padding-right: 0px;
+        padding-left: 0px;   
+    }
+
+.homewelcome, .hometittle, .words{
+font-size: 230%;
+margin: 5px;
+padding-bottom: 0%;
+}
+.wordsHome{
+margin-top: 2%;
+margin-bottom: 2%;
+}
+
+.hometittle {
+font-size: 50px;
+}
+.containerimg #homeplant {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.containerimg #homeplant:hover {
+    transform: rotate(10deg);
+}
+.orderbuttons {
+margin-top: 20px;
+}
+/*ESTILO DE LA VISTA DE REGISTO*/
+.containerimg {
+    width: 30%;
+}
+.content {
+width: auto;
+
+}
+.headerRegister {
+       padding-left: 4em;
+       justify-content: center;
+       align-items: center;
+       width: 80%;
+       display: flex;
+       flex-direction: column;
+       text-align: center;    
+       gap: 10px;
+       font-size: 1.1em;
+}
+
+.input {
+    width: 80%;
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+.h4Register {
+    font-size: 1.9em;
+    margin: 5px;
+    width: 80%;
+    font-weight: bolder;
+}
+
+    .buttonRegister {
+        width: auto;
+        height: 1.8em;
+        margin: 7px;
+        border-radius: 0.6em;
+        font-size: 1.1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .buttonRegister#google {
+    width: 70%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    height: 3.2em;
+    font-size: 0.75em;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+    .imgGoogle{
+    width: 2.3em;
+    }
+    
+
+.Inputcontainer{
+margin-right: 6em;
+margin-top: 0%;
+padding: 10px;
+}
+.googleLoginBtn{
+    border-radius: 0.6em;
+    }
+
+.success {
+    padding-top: 0px;
+    font-weight: bolder;
+    }
+.error {
+    padding-top: 0px;
+    font-weight: bolder;
+    }
+.titleLogin{
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+/*post*/
+.headerPost {
+    width: 100%;
+    height: 100px;
+    margin: 0%;
+    font-size: 400%;
+    display: flex;
+    gap: 20px;
+    }
+    .logoImage{
+    width: 60px;
+    height: auto;
+    }
+   #homepagePostes, .homepage {
+    padding-top: 0em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    place-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    }
+    .postView {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    place-content: center;
+    padding-top: 30px;
+    margin-bottom: 40px;
+    }
+    
+    .ListGroupItem{
+    border-radius: 1em;
+    width: 35%;
+    height: auto;
+    padding: 20px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    li h5 {
+    margin: 0%;
+    font-size: 200%;
+    font-weight: bolder;
+    text-align: left;
+    font-family: 'Font2', sans-serif;
+    padding-left: 3%;
+    }
+    
+    li p {
+        height: auto;
+        font-size: 170%;
+        margin: 0%;
+        padding: 12px;
+        border: 2px;
+        border-radius: 0.2em;
+        }
+    .containerPubication{
+       width: 100%;
+       display: flex;
+       place-content: center;
+       align-self: center;
+       justify-content: center;
+       flex-direction: row;
+       margin-top: 2%;
+       gap: 15px;
+    }
+    .imagePublication{
+    width: 90px;
+    height: 90px;
+    align-self: flex-start;
+    border-style: solid;
+    border-radius: 1em;
+    padding: 0.5em;
+    }
+    #task-form{
+    width: 50%;
+    height: 280px;
+    padding: 10px;
+    border-radius: 1em;
+    gap: 5px
+    }
+    .postTitle{
+        border-radius: 0.3em;
+        height: 12%;
+        font-size: 180%;
+        padding: 10px;
+    }
+    #postText{
+        border-radius: 0.3em;
+        height: 50%;
+        font-size: 200%;
+        padding: 10px;
+    }
+    .buttonSave {
+        border-radius: 0.4em;
+        width: auto;
+        align-self: last baseline;
+        height: 15%;
+        font-size: 1.5em;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .logOutButton{
+        width: 60px;
+        margin-left: 85%;
+        z-index: 3;
+        position: absolute;
+    }
+}
+
+/* Estilo inicial del botón de "like" */
+.likeButton{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+} 
+
+/* Estilo del botón de "like" cuando se le ha dado "like" (coloreado de rojo) */
+.likeButton.liked {
+    background-color: red;
+    color: white;
+    border: 1px solid red
+}
+  
